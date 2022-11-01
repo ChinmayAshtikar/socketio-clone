@@ -17,20 +17,20 @@ io.on('connection', (socket) => {
 http.listen(8080, () => console.log('listening on http://localhost:8080') );
 
 
-// Regular Websockets
+//Regular Websockets
 
-// const WebSocket = require('ws')
-// const server = new WebSocket.Server({ port: '8080' })
+const WebSocket = require('ws')
+const server = new WebSocket.Server({ port: '8080' })
 
-// server.on('connection', socket => { 
+server.on('connection', socket => { 
 
-//   socket.on('message', message => {
+  socket.on('message', message => {
 
-//     socket.send(`Roger that! ${message}`);
+    socket.send(`Roger that! ${message}`);
 
-//   });
+  });
 
-// });
+});
 
 
  
